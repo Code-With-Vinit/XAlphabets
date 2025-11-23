@@ -14,10 +14,10 @@ function App() {
   }
 
   return (
-    <div className='output'>
+    <div >
         <h1>Alphabet Buttons</h1>
         <p>Click letters(or use your keyboard) to build text.</p>
-        <input  value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Your text will appear here..." type="text"/>
+        <input className='output' value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Your text will appear here..." type="text"/>
         <br />
         <button onClick={handleBackspace}>Backspace</button>
         <br />
