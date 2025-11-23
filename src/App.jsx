@@ -14,22 +14,29 @@ function App() {
   }
 
   return (
-    <div >
+    <div className='container'>
         <h1>Alphabet Buttons</h1>
         <p>Click letters(or use your keyboard) to build text.</p>
         <div className='output'>
-            <input value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Your text will appear here..." type="text"/>
+            {/* <input value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Your text will appear here..." type="text"/> */}
+            {input}
         </div>
         <br />
-        <button onClick={handleBackspace}>Backspace</button>
+        <div className='backspace-container'>
+            <button onClick={handleBackspace}>Backspace</button>
+        </div>
         <br />
-        {arr.map(char=>(
+        <div>
+          {arr.map(char=>(
           <span key={char}>
             <button className="key" value={char} onClick={()=>handleInput(char)}>{char}</button>
             {char==='M'?<br />:""}
           </span>
         ))}
 
+
+        </div>
+        
     </div>
   )
 }
